@@ -583,14 +583,22 @@ var videogame_system = "Atari";
  *
  */
 
-   class Pen{
+/*   class Pen{
     constructor(color){
       this.color = color;
     }
     write(str){
       return this.color + ": " + str;
     }
+  }*/
+
+  function Pen(color){
+    this.color = color;
   }
+
+  Pen.prototype.write = function(str){
+    return this.color + ": " + str;
+  };
 
 
 /* Step 31
@@ -619,6 +627,24 @@ var videogame_system = "Atari";
  *   grow
  *
  */
+
+   function Garden(plants){
+    this.plantsTotal = plants;
+    this.isWatered = false;
+  }
+
+  Garden.prototype.water = function(){
+    this.isWatered = true;
+  };
+
+  Garden.prototype.grow = function(){
+    if(this.isWatered){
+      this.plantsTotal ++;
+      this.isWatered = false;
+    } else{
+      return false;
+    }
+  };
 
 
 /* Step 32
