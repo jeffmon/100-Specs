@@ -530,6 +530,14 @@ var videogame_system = "Atari";
  *
  */
 
+   function purchaseLaptop(laptop){
+    if(laptopCosts.hasOwnProperty(laptop)){
+      return `${laptopCosts[laptop]}`;
+    } else{
+      return -1;
+    }
+  }
+
 
 /* Step 29
  *
