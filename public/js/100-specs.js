@@ -952,17 +952,17 @@ HundredSpecs.prototype = {
 			js.expect.E.expect(listLivingOrgClass).to.be.a("function");
 		});
 		js.mocha.M.it("should return HTML formatted Unordered List with all the classifications",function() {
-			js.expect.E.expect(listLivingOrgClass()).to.contain("<ul>");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("<li>");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("</li>");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("</ul>");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Kingdom");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Phylum");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Class");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Order");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Family");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Genus");
-			js.expect.E.expect(listLivingOrgClass()).to.contain("Species");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("<ul>");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("<li>");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("</li>");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("</ul>");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Kingdom");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Phylum");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Class");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Order");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Family");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Genus");
+			js.expect.E.expect(listLivingOrgClass(loc)).to.contain("Species");
 		});
 	}
 	,step24: function() {

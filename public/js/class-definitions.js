@@ -431,6 +431,19 @@ var videogame_system = "Atari";
  * @return {String}
  *
  */
+ function listLivingOrgClass(array){
+    if(Array.isArray(array)){
+    var list = [];
+    for(var i = 0; i < array.length; i++){
+      list.push("<li>" + array[i] + "</li>");
+    }
+    var joined = list.join(" ");
+
+    return `<ul> \ ${joined} \ </ul>`;
+  } else{
+    return false;
+  }
+}
 
 
 /* Step 26
