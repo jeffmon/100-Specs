@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 /* Step 1
  *
  * Declare a variable named "unicorn"
@@ -466,6 +468,14 @@ var videogame_system = "Atari";
  *
  */
 
+  function favoritePlanet(currentPlanet){
+    if(planets.indexOf(currentPlanet) !== -1){
+      return "I'm from " + currentPlanet + ", but I wish I could go to " + planets[Math.floor(Math.random() * planets.length)];
+    } else{
+      return currentPlanet + " is not a planet!";
+    }
+  }
+
 
 /* Step 27
  *
@@ -489,6 +499,23 @@ var videogame_system = "Atari";
  *   earnMoney
  *
  */
+
+ class Person{
+  constructor(name, money, age, gender){
+    this.name = name;
+    this.money = money;
+    this.age = age;
+    this.gender = gender;
+
+  }
+  spendMoney(amount){
+    this.money -= amount;
+  }
+
+  earnMoney(amount){
+    this.money += amount;
+  }
+}
 
 
 /* Step 28
