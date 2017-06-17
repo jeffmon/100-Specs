@@ -583,6 +583,15 @@ var videogame_system = "Atari";
  *
  */
 
+   class Pen{
+    constructor(color){
+      this.color = color;
+    }
+    write(str){
+      return this.color + ": " + str;
+    }
+  }
+
 
 /* Step 31
  *
