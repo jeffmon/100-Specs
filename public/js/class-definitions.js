@@ -389,15 +389,15 @@ var videogame_system = "Atari";
  * @return {Bool when False, String when True}
  *
  */
-function drink(beer){
-  if(beers.hasOwnProperty(beer) === true && typeof beers[beer] === "string"){
-    return "This " + beer + " is " + beers[beer] + ".";
-  } else if(Array.isArray(beers[beer])){
-    return "This " + beer + " is " + beers[beer][0] + " and " + beers[beer][1] + ".";
-  } else{
-    return false;
+  function drink(beer){
+    if(beers.hasOwnProperty(beer) === true && typeof beers[beer] === "string"){
+      return "This " + beer + " is " + beers[beer] + ".";
+    } else if(Array.isArray(beers[beer])){
+      return "This " + beer + " is " + beers[beer][0] + " and " + beers[beer][1] + ".";
+    } else{
+      return false;
+    }
   }
-}
 
 /* Step 24
  *
@@ -410,6 +410,16 @@ function drink(beer){
  * @return {String if true else return false}
  *
  */
+
+   function browseURL(browser){
+
+    if(browsers.hasOwnProperty(browser)){
+      return browsers[browser];
+    } else{
+      return false;
+    }
+
+  }
 
 
 /* Step 25
