@@ -551,6 +551,16 @@ var videogame_system = "Atari";
  *
  */
 
+   function canTalkAbout(club){
+    if(club === "Fight Club"){
+      return false;
+    } else{
+      return true;
+    }
+  }
+
+
+
 
 /* Step 30
  *
