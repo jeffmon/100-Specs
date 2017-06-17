@@ -710,6 +710,39 @@ var videogame_system = "Atari";
  *
  */
 
+  function PrincessLeia(name, money, age, gender){
+    this.name = name;
+    this.money = money;
+    this.age = age;
+    this.gender = gender;
+    this.isInTrouble = null;
+    //Person.call(this, name, money, age, gender);
+  }
+
+  PrincessLeia.prototype = Object.create(Person.prototype, {
+    constructor: PrincessLeia
+  });
+
+  PrincessLeia.prototype.shootsGun = function(){
+    this.isInTrouble = false;
+    return "Leia shoots her gun wildly";
+  };
+
+  PrincessLeia.prototype.getsInTrouble = function(){
+    this.isInTrouble = true;
+    return "Help me Obi-wan Kenobi, you're my only hope";
+  };
+
+  PrincessLeia.prototype.marries = function(person){
+    if(person === "Han Solo"){
+      return true;
+    } else if (person === "Luke Skywalker"){
+      return "Gross!";
+    } else{
+      return false;
+    }
+  };
+
 
 /* Step 34
  *
