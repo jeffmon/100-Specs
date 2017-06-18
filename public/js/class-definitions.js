@@ -1169,8 +1169,8 @@ Scientist.prototype.addDiscovery = function(str){
  */
 
  class Lightbulb{
-  constructor(){
-    this.isOn = undefined;
+  constructor(on){
+    this.isOn = on;
   }
  }
 
@@ -1239,12 +1239,12 @@ var singleStory = new House(1);
 var twoStory = new House(2);
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent = new Lightbulb(true);
+var halogen = new Lightbulb(false);
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie("chocolate");
+var gingerbread = new Cookie("gingerbread");
 
 // Create 2 different meals
 var breakfast;
