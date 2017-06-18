@@ -1495,8 +1495,9 @@ var notWarmOrColdAnimal = bear.isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive("Kamehameha");
+var forwardDriving = forte.drive(null);
+
 
 
  /* Step 93
