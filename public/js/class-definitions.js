@@ -1090,6 +1090,16 @@ Scientist.prototype.addDiscovery = function(str){
  *
  */
 
+ class Shape{
+  constructor(sides){
+    if(sides >= 3){
+      this.sides = sides;
+    } else {
+      this.sides = null;
+    }
+  }
+ }
+
 
 /**
  * Step 53
@@ -1099,6 +1109,13 @@ Scientist.prototype.addDiscovery = function(str){
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
+ class Box{
+  constructor(anything){
+    this.contents = anything;
+    this.isOpen = undefined;
+  }
+ }
+
 
 /**
  * Step 54
@@ -1106,6 +1123,12 @@ Scientist.prototype.addDiscovery = function(str){
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
+
+ class Door{
+  constructor(){
+    this.isOpen = undefined;
+  }
+ }
 
 
 /**
@@ -1115,6 +1138,13 @@ Scientist.prototype.addDiscovery = function(str){
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
+
+ class Shoe{
+  constructor(size, color){
+    this.size = size;
+    this.color = color;
+  }
+ }
 
 
 /**
