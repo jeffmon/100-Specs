@@ -1380,6 +1380,10 @@ Shape.prototype.getType = function(shapeType){
  *
  */
 
+ Shoe.prototype.findShoes = function(){
+  return "Found " + this.color + " shoes of size " + this.size;
+ };
+
 
  /* Step 87
  *
@@ -1389,6 +1393,14 @@ Shape.prototype.getType = function(shapeType){
  * storiesTooTall, return true, else return false.
  *
  */
+
+ House.prototype.isATallStory = function(storiesTooTall){
+  if(this.stories >= storiesTooTall){
+    return true;
+  } else{
+    return false;
+  }
+ };
 
 
  /* Step 88
