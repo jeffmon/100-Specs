@@ -1479,9 +1479,14 @@ Shape.prototype.getType = function(shapeType){
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+
+var bear = new Animal("Bear", "male");
+
+var warmBloodedAnimal = george.isWarmBlooded();
+var coldBloodedAnimal = nemo.isWarmBlooded();
+var notWarmOrColdAnimal = bear.isWarmBlooded();
+
+
 
 
 /* Step 92
