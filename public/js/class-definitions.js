@@ -883,6 +883,7 @@ Scientist.prototype.addDiscovery = function(str){
  */
 
 
+
 /* Step 37
  *
  * WIP
@@ -1055,6 +1056,13 @@ Scientist.prototype.addDiscovery = function(str){
  * @param {string} gender  male or female
  */
 
+ class Animal{
+  constructor(species, gender){
+    this.species = species;
+    this.gender = gender;
+  }
+ }
+
 
 /**
  * Step 51
@@ -1063,6 +1071,13 @@ Scientist.prototype.addDiscovery = function(str){
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
+
+ class Vehicle{
+  constructor(make, model){
+    this.make = make;
+    this.model = model;
+  }
+ }
 
 
 /**
