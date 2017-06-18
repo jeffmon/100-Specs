@@ -1110,9 +1110,9 @@ Scientist.prototype.addDiscovery = function(str){
  */
 
  class Box{
-  constructor(anything){
+  constructor(anything, open){
     this.contents = anything;
-    this.isOpen = undefined;
+    this.isOpen = open;
   }
  }
 
@@ -1125,8 +1125,8 @@ Scientist.prototype.addDiscovery = function(str){
  */
 
  class Door{
-  constructor(){
-    this.isOpen = undefined;
+  constructor(open){
+    this.isOpen = open;
   }
  }
 
@@ -1210,28 +1210,29 @@ Scientist.prototype.addDiscovery = function(str){
 
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal("Monkey", "male");
+var nemo = new Animal("Fish", "male");
+var neko = new Animal("Cat", "female");
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle("Honda", "Civic");
+var forte = new Vehicle("KIA", "Forte");
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4);
+var hexagon = new Shape(6);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var catBox = new Box(neko, true);
+var christmasPresent = new Box("doodoo", false);
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door(true);
+var bankVault = new Door(false);
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers = new Shoe(7, "red");
+var dressShoes = new Shoe(10, "black");
 
 // Create 2 houses
 var singleStory;
