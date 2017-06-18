@@ -1109,11 +1109,16 @@ Scientist.prototype.addDiscovery = function(str){
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
- class Box{
-  constructor(anything, open){
+ /*class Box{
+  constructor(anything, openState){
     this.contents = anything;
-    this.isOpen = open;
+    this.isOpen = openState;
   }
+ }*/
+
+ function Box(anything, openState){
+  this.contents = anything;
+  this.isOpen = openState;
  }
 
 
@@ -1224,7 +1229,10 @@ var hexagon = new Shape(6);
 
 // Create 2 boxes
 var catBox = new Box(neko, true);
-var christmasPresent = new Box("doodoo", false);
+var christmasPresent = new Box("neko", false);
+console.log(christmasPresent);
+
+
 
 // Create 2 doors
 var automaticDoor = new Door(true);
@@ -1319,7 +1327,7 @@ var dinner = new Meal(["fish", "vegetables"]);
  *
  */
 
-Shape.prototype.getType = function(shapeType){
+Shape.prototype.getType = function(){
   var numSides = this.sides;
   switch(numSides){
     case 3: return "triangle";
@@ -1520,8 +1528,12 @@ var polygon = shape2.getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox = christmasPresent.openBox();
-var closeAnOpenBox = catBox.openBox();
+
+ var box1 = new Box("anything", false);
+ var box2 = new Box("anything", true);
+
+var openAClosedBox = box1.openBox();
+var closeAnOpenBox = box2.openBox();
 
 
  /* Step 95
@@ -1530,8 +1542,11 @@ var closeAnOpenBox = catBox.openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+
+ var door1 = new Door(false);
+ var door2 = new Door(true);
+var openAClosedDoor = door1.openClose();
+var closeAnOpenDoor = door2.openClose();
 
 
 /* Step 96
@@ -1540,8 +1555,8 @@ var closeAnOpenDoor;
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = rubySlippers.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
  /* Step 97
@@ -1550,8 +1565,10 @@ var blackShoesSize10;
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+ var fiveStory = new House(10);
+var farTooTallAStory = fiveStory.isATallStory(1);
+var shortStory = singleStory.isATallStory();
+
 
 
  /* Step 98
@@ -1560,8 +1577,13 @@ var shortStory;
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn;
-var porchLightsOff;
+
+ var light1 = new Lightbulb(true);
+ var light2 = new Lightbulb(false);
+
+var kitchenLightsOn = light2.flipSwitch("on");
+var porchLightsOff = light1.flipSwitch();
+
 
 
  /* Step 99
@@ -1570,8 +1592,12 @@ var porchLightsOff;
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+
+
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster("Monday");
+var cookieMonsterBlocked = chocolateChip.swipedByCookieMonster();
+
+
 
 
  /* Step 100
@@ -1580,5 +1606,9 @@ var cookieMonsterBlocked;
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+
+var meal1 = new Meal(["chips"]);
+var meal2 = new Meal(["fish"]);
+
+var badForYou = meal1.containsJunkFood();
+var goodForYou = meal2.containsJunkFood();
