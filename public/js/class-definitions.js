@@ -1273,6 +1273,16 @@ var dinner = new Meal(["fish", "vegetables"]);
  *
  */
 
+ Animal.prototype.isWarmBlooded = function(){
+  if(this.species === "Fish"){
+    return false;
+  } else if (this.species === "Monkey" || this.species === "Bird"){
+    return true;
+  } else{
+    return "Could not determine if warm-blooded";
+  }
+ };
+
 
 /* Step 82
  *
@@ -1281,6 +1291,14 @@ var dinner = new Meal(["fish", "vegetables"]);
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+
+ Vehicle.prototype.drive = function(streetName){
+  if(typeof streetName === "string" && streetName !== null && streetName !== ""){
+    return "Driving on " + streetName;
+  } else{
+    return "Driving forward";
+  }
+ };
 
 
  /* Step 83
@@ -1301,6 +1319,21 @@ var dinner = new Meal(["fish", "vegetables"]);
  *
  */
 
+Shape.prototype.getType = function(shapeType){
+  var numSides = this.sides;
+  switch(numSides){
+    case 3: return "triangle";
+    case 4: return "quadrilateral";
+    case 5: return "pentagon";
+    case 6: return "hexagon";
+    case 7: return "heptagon";
+    case 8: return "octagon";
+    case 9: return "nonagon";
+    case 10: return "decagon";
+    default: return "Could not determine type";
+  }
+ };
+
 
 /* Step 84
  *
@@ -1311,6 +1344,15 @@ var dinner = new Meal(["fish", "vegetables"]);
  *
  */
 
+ Box.prototype.openBox = function(){
+  if(this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  } else{
+    return false;
+  }
+ };
+
 
  /* Step 85
  *
@@ -1319,6 +1361,16 @@ var dinner = new Meal(["fish", "vegetables"]);
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
+
+ Door.prototype.openClose = function(){
+  if(this.isOpen === true){
+    this.isOpen = false;
+    return false;
+  } else if(this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  }
+ };
 
 
 /* Step 86
