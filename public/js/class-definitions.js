@@ -1168,6 +1168,12 @@ Scientist.prototype.addDiscovery = function(str){
  * @param {boolean} isOn Whether the light is on or off
  */
 
+ class Lightbulb{
+  constructor(){
+    this.isOn = undefined;
+  }
+ }
+
 
 /**
  * Step 58
