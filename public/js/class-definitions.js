@@ -1413,6 +1413,22 @@ Shape.prototype.getType = function(shapeType){
  *
  */
 
+ Lightbulb.prototype.flipSwitch = function(on){
+  if(on === "on"){
+    this.isOn = true;
+    return true;
+  } else {
+    this.isOn = false;
+    return false;
+  }
+ };
+
+ /*class Lightbulb{
+  constructor(on){
+    this.isOn = on;
+  }
+ }*/
+
 
  /* Step 89
  *
