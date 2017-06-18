@@ -815,6 +815,51 @@ var videogame_system = "Atari";
  *
  */
 
+ function Scientist(name, money, age, gender){
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+  this.disciplines = [];
+  this.discoveries = [];
+}
+
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor: Scientist
+});
+
+Scientist.prototype.addDiscipline = function(str){
+  this.disciplines.push(str);
+  return this.disciplines;
+};
+
+Scientist.prototype.checkDiscipline = function(str){
+  if(this.disciplines.indexOf(str) === -1){
+    return false;
+  } else{
+    return true;
+  }
+};
+
+Scientist.prototype.addDiscovery = function(str){
+  this.discoveries.push(str);
+  if(this.discoveries.length === 1){
+    return "I discovered " + this.discoveries[0] + ".";
+  } else if(this.discoveries.length === 2){
+    var popped = this.discoveries.pop();
+    var joined = this.discoveries.join(", ");
+    var rejoin = "I discovered " + joined + " and " + popped + ".";
+    this.discoveries.push(popped);
+    return rejoin;
+  } else{
+    var popped = this.discoveries.pop();
+    var joined = this.discoveries.join(", ");
+    var rejoin = "I discovered " + joined + ", and " + popped + ".";
+    this.discoveries.push(popped);
+    return rejoin;
+  }
+};
+
 
 /* Step 36
  *
