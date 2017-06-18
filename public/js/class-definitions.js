@@ -762,6 +762,19 @@ var videogame_system = "Atari";
  *
  */
 
+   function Stapler(color, maxPapers){
+    this.color = color;
+    this.maxPapers = maxPapers;
+  }
+
+  Stapler.prototype.staplePapers = function(papers){
+    if(papers <= this.maxPapers){
+      return true;
+    } else if(papers >= this.maxPapers){
+      return false;
+    }
+  };
+
 
 /* Step 35
  *
