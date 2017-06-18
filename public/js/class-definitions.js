@@ -1506,8 +1506,12 @@ var forwardDriving = forte.drive(null);
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var shape1 = new Shape(10);
+var shape2 = new Shape(11);
+
+var decagon = shape1.getType();
+var polygon = shape2.getType();
+
 
 
 /* Step 94
@@ -1516,8 +1520,8 @@ var polygon;
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = christmasPresent.openBox();
+var closeAnOpenBox = catBox.openBox();
 
 
  /* Step 95
